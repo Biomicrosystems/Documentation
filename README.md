@@ -10,5 +10,8 @@
 
 When using these images please acknowledge respectively
 
-# Lab-book
-- The Excel file format of our groups to document your experimental data
+# Documentation
+- LABBOOK: The Excel file format of our groups to document your experimental data
+- Confidential Agreement (NDA): document to sign the confidential agreement of the group (spanish version)
+- Poster: Our group's powerpoint format for posters
+- Presentation: Our group's powerpoint format for presentations

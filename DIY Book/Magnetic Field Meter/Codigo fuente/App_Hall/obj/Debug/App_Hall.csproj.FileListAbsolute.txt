@@ -1,0 +1,18 @@
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\bin\Debug\App_Hall.exe.config
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\bin\Debug\App_Hall.exe
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\bin\Debug\App_Hall.pdb
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.csprojResolveAssemblyReference.cache
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.Form1.resources
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.Properties.Resources.resources
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.csproj.GenerateResource.Cache
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.exe
+C:\Users\Crhistian SG\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.pdb
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\bin\Debug\App_Hall.exe.config
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.exe
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.pdb
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\bin\Debug\App_Hall.exe
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\bin\Debug\App_Hall.pdb
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.csprojResolveAssemblyReference.cache
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.Form1.resources
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.Properties.Resources.resources
+C:\Users\crhistian\Dropbox\Doctorado Andes\Primer Semestre\Fabricacion de Microsistemas\App_Hall\App_Hall\obj\Debug\App_Hall.csproj.GenerateResource.Cache

@@ -1,0 +1,907 @@
+******************************************************************************
+                  MSP430 Linker PC v20.2.1                     
+******************************************************************************
+>> Linked Thu Mar 25 10:26:58 2021
+
+OUTPUT FILE NAME:   <Potentiostat_class.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000cb86
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000200  000000c5  0000013b  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 0000c000   00003fde  00000ea4  0000313a  RWIX
+  BSLSIGNATURE          0000ffde   00000002  00000002  00000000  RWIX  ffff 
+  INT00                 0000ffe0   00000002  00000002  00000000  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000002  00000000  RWIX
+  INT03                 0000ffe6   00000002  00000002  00000000  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000002  00000000  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.bss       0    00000250    00000015     UNINITIALIZED
+                  00000250    00000006     main.obj (.bss:medidas)
+                  00000256    00000004     main.obj (.bss:serial)
+                  0000025a    00000004     (.common:data)
+                  0000025e    00000002     rts430_eabi.lib : memory.c.obj (.bss)
+                  00000260    00000002                     : new.cpp.obj (.bss)
+                  00000262    00000002     (.common:nextval)
+                  00000264    00000001     main.obj (.bss:analog)
+
+.data      0    00000266    00000010     UNINITIALIZED
+                  00000266    00000006     main.obj (.data)
+                  0000026c    00000004     main.obj (.data:data_send)
+                  00000270    00000002     rts430_eabi.lib : _lock.c.obj (.data:_lock)
+                  00000272    00000002                     : _lock.c.obj (.data:_unlock)
+                  00000274    00000002                     : memory.c.obj (.data)
+
+.sysmem    0    00000200    00000050     UNINITIALIZED
+                  00000200    00000008     rts430_eabi.lib : memory.c.obj (.sysmem)
+                  00000208    00000048     --HOLE--
+
+.stack     0    000003b0    00000050     UNINITIALIZED
+                  000003b0    00000002     rts430_eabi.lib : boot.c.obj (.stack)
+                  000003b2    0000004e     --HOLE--
+
+.text      0    0000c000    00000d4e     
+                  0000c000    00000148     main.obj (.text:_Z16Timer_A_CCR0_ISRv)
+                  0000c148    000000fa     rts430_eabi.lib : memory.c.obj (.text:aligned_alloc)
+                  0000c242    000000d2                     : memory.c.obj (.text:free)
+                  0000c314    000000c0     ASV.obj (.text:_ZN3ASV11processDataEPci)
+                  0000c3d4    000000c0     SWASV.obj (.text:_ZN3msp5SWASV11processDataEPci)
+                  0000c494    000000be     CyclicVoltammetry.obj (.text:_ZN17CyclicVoltammetry11processDataEPci)
+                  0000c552    00000090     main.obj (.text:_Z11USCI0RX_ISRv)
+                  0000c5e2    00000084     CyclicVoltammetry.obj (.text:_ZN17CyclicVoltammetry9NextValueEv)
+                  0000c666    0000007e     MSP430lib.lib : uart.obj (.text:_ZN3msp4uart4initEm)
+                  0000c6e4    0000007c     rts430_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  0000c760    00000068                     : memory.c.obj (.text:split)
+                  0000c7c8    00000060     main.obj (.text:__sti___8_main_cpp_medidas)
+                  0000c828    0000005c     rts430_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit:__TI_auto_init_nobinit)
+                  0000c884    0000005a     ASV.obj (.text:_ZN3ASV9NextValueEv)
+                  0000c8de    00000056     CyclicVoltammetry.obj (.text:_ZN17CyclicVoltammetryC1Ev)
+                  0000c934    00000050     ASV.obj (.text:_ZN3ASVC1Ev)
+                  0000c984    0000004c     main.obj (.text:main)
+                  0000c9d0    0000004c     rts430_eabi.lib : lsr16.asm.obj (.text)
+                  0000ca1c    00000046     boardMSP.obj (.text:_Z10board_initv)
+                  0000ca62    00000034     SWASV.obj (.text:_ZN3msp5SWASVC1Ev)
+                  0000ca96    00000030     MSP430lib.lib : ADC.obj (.text:_ZN3msp3ADC17readSingleChannelEj)
+                  0000cac6    0000002c     rts430_eabi.lib : asr16.asm.obj (.text)
+                  0000caf2    0000002c                     : lsl16.asm.obj (.text)
+                  0000cb1e    00000028                     : memory.c.obj (.text:free_list_insert)
+                  0000cb46    00000024                     : new.cpp.obj (.text:_Znwj)
+                  0000cb6a    0000001c     MSP430lib.lib : ADC.obj (.text:_ZN3msp3ADC4initEh)
+                  0000cb86    0000001c     rts430_eabi.lib : boot.c.obj (.text:_c_int00_noargs)
+                  0000cba2    0000001c                     : memory.c.obj (.text:free_list_remove)
+                  0000cbbe    00000018     MSP430lib.lib : uart.obj (.text:_ZN3msp4uartC1Ev)
+                  0000cbd6    00000016     rts430_eabi.lib : typeinfo.c.obj (.text:_ZN10__cxxabiv120__si_class_type_infoD0Ev)
+                  0000cbec    00000016     DACR2R.obj (.text:_ZN7DAC_R2R8setValueEi)
+                  0000cc02    00000014     rts430_eabi.lib : typeinfo.c.obj (.text:_ZN10__cxxabiv117__class_type_infoD0Ev)
+                  0000cc16    00000014     DACR2R.obj (.text:_ZN7DAC_R2RC1Ev)
+                  0000cc2a    00000014     rts430_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  0000cc3e    00000014                     : mult16.asm.obj (.text)
+                  0000cc52    00000012     boardMSP.obj (.text:_Z11initTimer_Av)
+                  0000cc64    00000012     rts430_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000cc76    00000012                     : memcpy.c.obj (.text:memcpy)
+                  0000cc88    00000010     ASV.obj (.text:_ZN3ASV13StopConditionEv)
+                  0000cc98    00000010     rts430_eabi.lib : epilog.asm.obj (.text)
+                  0000cca8    0000000e                     : typeinfo.c.obj (.text:_ZN10__cxxabiv117__class_type_infoD1Ev)
+                  0000ccb6    0000000e                     : typeinfo.c.obj (.text:_ZN10__cxxabiv120__si_class_type_infoD1Ev)
+                  0000ccc4    0000000e     CyclicVoltammetry.obj (.text:_ZN17CyclicVoltammetry13StopConditionEv)
+                  0000ccd2    0000000e     MSP430lib.lib : uart.obj (.text:_ZN3msp4uart7putcharEi)
+                  0000cce0    0000000a     rts430_eabi.lib : new.cpp.obj (.text:_ZdlPv)
+                  0000ccea    00000008     boardMSP.obj (.text:_Z9ADC10_ISRv)
+                  0000ccf2    00000008     DACgenerator.obj (.text:_ZN13DAC_generatorC1Ev)
+                  0000ccfa    00000008     rts430_eabi.lib : pure_virt.c.obj (.text:__cxa_pure_virtual)
+                  0000cd02    00000008                     : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000cd0a    00000008                     : memory.c.obj (.text:malloc)
+                  0000cd12    00000006     CyclicVoltammetry.obj (.text:_ZN17CyclicVoltammetry15getCurrentValueEv)
+                  0000cd18    00000006     ASV.obj (.text:_ZN3ASV15getCurrentValueEv)
+                  0000cd1e    00000006     SWASV.obj (.text:_ZN3msp5SWASV15getCurrentValueEv)
+                  0000cd24    00000006     SWASV.obj (.text:_ZN3msp5SWASV9NextValueEv)
+                  0000cd2a    00000006     Technique.obj (.text:_ZN9Technique9isRunningEv)
+                  0000cd30    00000006     rts430_eabi.lib : exit.c.obj (.text:abort)
+                  0000cd36    00000004     SWASV.obj (.text:_ZN3msp5SWASV13StopConditionEv)
+                  0000cd3a    00000004     rts430_eabi.lib : new.cpp.obj (.text:_ZdlPvj)
+                  0000cd3e    00000004                     : error.c.obj (.text:__abort_execution)
+                  0000cd42    00000004                     : pre_init.c.obj (.text:_system_pre_init)
+                  0000cd46    00000002     MSP430lib.lib : ADC.obj (.text:_ZN3msp3ADCC1Ev)
+                  0000cd48    00000002     rts430_eabi.lib : stdlib_typeinfo.cpp.obj (.text:_ZNSt9type_infoD1Ev)
+                  0000cd4a    00000002                     : _lock.c.obj (.text:_nop)
+                  0000cd4c    00000002                     : startup.c.obj (.text:_system_post_cinit)
+
+.const     0    0000cd4e    00000134     
+                  0000cd4e    00000025     rts430_eabi.lib : typeinfo.c.obj (.const:.typeinfo:_ZTSN10__cxxabiv120__si_class_type_infoE)
+                  0000cd73    00000001     --HOLE-- [fill = 0]
+                  0000cd74    00000022                     : typeinfo.c.obj (.const:.typeinfo:_ZTSN10__cxxabiv117__class_type_infoE)
+                  0000cd96    00000014     CyclicVoltammetry.obj (.const:.typeinfo:_ZTS17CyclicVoltammetry)
+                  0000cdaa    00000014     MSP430lib.lib : uart.obj (.const:_ZN29_INTERNAL_8_uart_cpp_3c0f36b03msp8baud_tblE)
+                  0000cdbe    00000010     DACR2R.obj (.const:.typeinfo:_ZTS13DAC_generator)
+                  0000cdce    0000000d     SWASV.obj (.const:.typeinfo:_ZTSN3msp5SWASVE)
+                  0000cddb    00000001     --HOLE-- [fill = 0]
+                  0000cddc    0000000d     rts430_eabi.lib : stdlib_typeinfo.cpp.obj (.const:.typeinfo:_ZTSSt9type_info)
+                  0000cde9    00000001     --HOLE-- [fill = 0]
+                  0000cdea    0000000c     CyclicVoltammetry.obj (.const:_ZTV17CyclicVoltammetry)
+                  0000cdf6    0000000c     ASV.obj (.const:_ZTV3ASV)
+                  0000ce02    0000000c     ASV.obj (.const:_ZTV9Technique)
+                  0000ce0e    0000000c     SWASV.obj (.const:_ZTVN3msp5SWASVE)
+                  0000ce1a    0000000b     ASV.obj (.const:.typeinfo:_ZTS9Technique)
+                  0000ce25    00000001     --HOLE-- [fill = 0]
+                  0000ce26    00000009     DACR2R.obj (.const:.typeinfo:_ZTS7DAC_R2R)
+                  0000ce2f    00000001     --HOLE-- [fill = 0]
+                  0000ce30    00000008     rts430_eabi.lib : typeinfo.c.obj (.const:_ZTVN10__cxxabiv117__class_type_infoE)
+                  0000ce38    00000008                     : typeinfo.c.obj (.const:_ZTVN10__cxxabiv120__si_class_type_infoE)
+                  0000ce40    00000006     CyclicVoltammetry.obj (.const:.typeinfo:_ZTI17CyclicVoltammetry)
+                  0000ce46    00000006     ASV.obj (.const:.typeinfo:_ZTI3ASV)
+                  0000ce4c    00000006     DACR2R.obj (.const:.typeinfo:_ZTI7DAC_R2R)
+                  0000ce52    00000006     rts430_eabi.lib : typeinfo.c.obj (.const:.typeinfo:_ZTIN10__cxxabiv117__class_type_infoE)
+                  0000ce58    00000006                     : typeinfo.c.obj (.const:.typeinfo:_ZTIN10__cxxabiv120__si_class_type_infoE)
+                  0000ce5e    00000006     SWASV.obj (.const:.typeinfo:_ZTIN3msp5SWASVE)
+                  0000ce64    00000006     DACgenerator.obj (.const:_ZTV13DAC_generator)
+                  0000ce6a    00000006     DACR2R.obj (.const:_ZTV7DAC_R2R)
+                  0000ce70    00000005     ASV.obj (.const:.typeinfo:_ZTS3ASV)
+                  0000ce75    00000001     --HOLE-- [fill = 0]
+                  0000ce76    00000004     DACR2R.obj (.const:.typeinfo:_ZTI13DAC_generator)
+                  0000ce7a    00000004     ASV.obj (.const:.typeinfo:_ZTI9Technique)
+                  0000ce7e    00000004     rts430_eabi.lib : stdlib_typeinfo.cpp.obj (.const:.typeinfo:_ZTISt9type_info)
+
+.cinit     0    0000ce84    00000020     
+                  0000ce84    0000000e     (.cinit..data.load) [load image, compression = lzss]
+                  0000ce92    00000006     (__TI_handler_table)
+                  0000ce98    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000ce9c    00000008     (__TI_cinit_table)
+
+.binit     0    0000c000    00000000     
+
+.init_array 
+*          0    0000ce82    00000002     
+                  0000ce82    00000002     main.obj (.init_array)
+
+TRAPINT    0    0000ffe0    00000002     
+                  0000ffe0    00000002     rts430_eabi.lib : int00.asm.obj (.int00)
+
+PORT1      0    0000ffe4    00000002     
+                  0000ffe4    00000002     rts430_eabi.lib : int02.asm.obj (.int02)
+
+PORT2      0    0000ffe6    00000002     
+                  0000ffe6    00000002     rts430_eabi.lib : int03.asm.obj (.int03)
+
+ADC10      0    0000ffea    00000002     
+                  0000ffea    00000002     boardMSP.obj (.int05)
+
+USCIAB0TX 
+*          0    0000ffec    00000002     
+                  0000ffec    00000002     rts430_eabi.lib : int06.asm.obj (.int06)
+
+USCIAB0RX 
+*          0    0000ffee    00000002     
+                  0000ffee    00000002     main.obj (.int07)
+
+TIMER0_A1 
+*          0    0000fff0    00000002     
+                  0000fff0    00000002     rts430_eabi.lib : int08.asm.obj (.int08)
+
+TIMER0_A0 
+*          0    0000fff2    00000002     
+                  0000fff2    00000002     main.obj (.int09)
+
+WDT        0    0000fff4    00000002     
+                  0000fff4    00000002     rts430_eabi.lib : int10.asm.obj (.int10)
+
+COMPARATORA 
+*          0    0000fff6    00000002     
+                  0000fff6    00000002     rts430_eabi.lib : int11.asm.obj (.int11)
+
+TIMER1_A1 
+*          0    0000fff8    00000002     
+                  0000fff8    00000002     rts430_eabi.lib : int12.asm.obj (.int12)
+
+TIMER1_A0 
+*          0    0000fffa    00000002     
+                  0000fffa    00000002     rts430_eabi.lib : int13.asm.obj (.int13)
+
+NMI        0    0000fffc    00000002     
+                  0000fffc    00000002     rts430_eabi.lib : int14.asm.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430_eabi.lib : boot.c.obj (.reset)
+
+$fill000   0    0000ffde    00000002     
+                  0000ffde    00000002     --HOLE-- [fill = ffff]
+
+MODULE SUMMARY
+
+       Module                       code   ro data   rw data
+       ------                       ----   -------   -------
+    .\
+       main.obj                     644    6         27     
+       CyclicVoltammetry.obj        428    38        0      
+       ASV.obj                      384    50        0      
+       SWASV.obj                    260    31        0      
+       boardMSP.obj                 96     2         0      
+       DACR2R.obj                   42     41        0      
+       DACgenerator.obj             8      6         0      
+       Technique.obj                6      0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       1868   174       27     
+                                                            
+    C:/Users/Camilo/OneDrive - Universidad de los Andes/Shared/workspace_ccs/MSP430lib/Debug/MSP430lib.lib
+       uart.obj                     164    20        0      
+       ADC.obj                      78     0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       242    20        0      
+                                                            
+    C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-msp430_20.2.1.LTS\lib\rts430_eabi.lib
+       memory.c.obj                 640    0         4      
+       typeinfo.c.obj               70     99        0      
+       copy_decompress_lzss.c.obj   124    0         0      
+       autoinit.c.obj               92     0         0      
+       lsr16.asm.obj                76     0         0      
+       new.cpp.obj                  50     0         2      
+       asr16.asm.obj                44     0         0      
+       lsl16.asm.obj                44     0         0      
+       boot.c.obj                   28     2         0      
+       copy_zero_init.c.obj         20     0         0      
+       mult16.asm.obj               20     0         0      
+       stdlib_typeinfo.cpp.obj      2      17        0      
+       copy_decompress_none.c.obj   18     0         0      
+       memcpy.c.obj                 18     0         0      
+       epilog.asm.obj               16     0         0      
+       isr_trap.asm.obj             8      0         0      
+       pure_virt.c.obj              8      0         0      
+       _lock.c.obj                  2      0         4      
+       exit.c.obj                   6      0         0      
+       error.c.obj                  4      0         0      
+       pre_init.c.obj               4      0         0      
+       int00.asm.obj                0      2         0      
+       int02.asm.obj                0      2         0      
+       int03.asm.obj                0      2         0      
+       int06.asm.obj                0      2         0      
+       int08.asm.obj                0      2         0      
+       int10.asm.obj                0      2         0      
+       int11.asm.obj                0      2         0      
+       int12.asm.obj                0      2         0      
+       int13.asm.obj                0      2         0      
+       int14.asm.obj                0      2         0      
+       startup.c.obj                2      0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       1296   138       10     
+                                                            
+       Heap:                        0      0         80     
+       Stack:                       0      0         80     
+       Linker Generated:            0      32        0      
+    +--+----------------------------+------+---------+---------+
+       Grand Total:                 3406   364       197    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000ce9c records: 2, size/record: 4, table size: 8
+	.data: load addr=0000ce84, load size=0000000e bytes, run addr=00000266, run size=00000010 bytes, compression=lzss
+	.bss: load addr=0000ce98, load size=00000004 bytes, run addr=00000250, run size=00000015 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000ce92 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                     
+-------   ----                                     
+0000004a  ADC10AE0                                 
+000001b0  ADC10CTL0                                
+000001b2  ADC10CTL1                                
+00000048  ADC10DTC0                                
+00000049  ADC10DTC1                                
+000001b4  ADC10MEM                                 
+000001bc  ADC10SA                                  
+00000268  ADC_data                                 
+00000057  BCSCTL1                                  
+00000058  BCSCTL2                                  
+00000053  BCSCTL3                                  
+0000cd30  C$$EXIT                                  
+00000059  CACTL1                                   
+0000005a  CACTL2                                   
+000010fb  CALBC1_12MHZ                             
+000010f9  CALBC1_16MHZ                             
+000010ff  CALBC1_1MHZ                              
+000010fd  CALBC1_8MHZ                              
+000010fa  CALDCO_12MHZ                             
+000010f8  CALDCO_16MHZ                             
+000010fe  CALDCO_1MHZ                              
+000010fc  CALDCO_8MHZ                              
+0000005b  CAPD                                     
+00000056  DCOCTL                                   
+00000128  FCTL1                                    
+0000012a  FCTL2                                    
+0000012c  FCTL3                                    
+00000000  IE1                                      
+00000001  IE2                                      
+00000002  IFG1                                     
+00000003  IFG2                                     
+00000022  P1DIR                                    
+00000025  P1IE                                     
+00000024  P1IES                                    
+00000023  P1IFG                                    
+00000020  P1IN                                     
+00000021  P1OUT                                    
+00000027  P1REN                                    
+00000026  P1SEL                                    
+00000041  P1SEL2                                   
+0000002a  P2DIR                                    
+0000002d  P2IE                                     
+0000002c  P2IES                                    
+0000002b  P2IFG                                    
+00000028  P2IN                                     
+00000029  P2OUT                                    
+0000002f  P2REN                                    
+0000002e  P2SEL                                    
+00000042  P2SEL2                                   
+0000001a  P3DIR                                    
+00000018  P3IN                                     
+00000019  P3OUT                                    
+00000010  P3REN                                    
+0000001b  P3SEL                                    
+00000043  P3SEL2                                   
+00000266  SelectedTechnique                        
+00000172  TA0CCR0                                  
+00000174  TA0CCR1                                  
+00000176  TA0CCR2                                  
+00000162  TA0CCTL0                                 
+00000164  TA0CCTL1                                 
+00000166  TA0CCTL2                                 
+00000160  TA0CTL                                   
+0000012e  TA0IV                                    
+00000170  TA0R                                     
+00000192  TA1CCR0                                  
+00000194  TA1CCR1                                  
+00000196  TA1CCR2                                  
+00000182  TA1CCTL0                                 
+00000184  TA1CCTL1                                 
+00000186  TA1CCTL2                                 
+00000180  TA1CTL                                   
+0000011e  TA1IV                                    
+00000190  TA1R                                     
+000010db  TLV_ADC10_1_LEN                          
+000010da  TLV_ADC10_1_TAG                          
+000010c0  TLV_CHECKSUM                             
+000010f7  TLV_DCO_30_LEN                           
+000010f6  TLV_DCO_30_TAG                           
+0000005d  UCA0ABCTL                                
+00000062  UCA0BR0                                  
+00000063  UCA0BR1                                  
+00000060  UCA0CTL0                                 
+00000061  UCA0CTL1                                 
+0000005f  UCA0IRRCTL                               
+0000005e  UCA0IRTCTL                               
+00000064  UCA0MCTL                                 
+00000066  UCA0RXBUF                                
+00000065  UCA0STAT                                 
+00000067  UCA0TXBUF                                
+0000006a  UCB0BR0                                  
+0000006b  UCB0BR1                                  
+00000068  UCB0CTL0                                 
+00000069  UCB0CTL1                                 
+0000006c  UCB0I2CIE                                
+00000118  UCB0I2COA                                
+0000011a  UCB0I2CSA                                
+0000006e  UCB0RXBUF                                
+0000006d  UCB0STAT                                 
+0000006f  UCB0TXBUF                                
+00000120  WDTCTL                                   
+0000ca1c  _Z10board_initv                          
+0000c552  _Z11USCI0RX_ISRv                         
+0000cc52  _Z11initTimer_Av                         
+0000c000  _Z16Timer_A_CCR0_ISRv                    
+0000ccea  _Z9ADC10_ISRv                            
+0000cc02  _ZN10__cxxabiv117__class_type_infoD0Ev   
+0000cca8  _ZN10__cxxabiv117__class_type_infoD1Ev   
+0000cca8  _ZN10__cxxabiv117__class_type_infoD2Ev   
+0000cbd6  _ZN10__cxxabiv120__si_class_type_infoD0Ev
+0000ccb6  _ZN10__cxxabiv120__si_class_type_infoD1Ev
+0000ccb6  _ZN10__cxxabiv120__si_class_type_infoD2Ev
+0000ccf2  _ZN13DAC_generatorC1Ev                   
+0000ccf2  _ZN13DAC_generatorC2Ev                   
+0000c494  _ZN17CyclicVoltammetry11processDataEPci  
+0000ccc4  _ZN17CyclicVoltammetry13StopConditionEv  
+0000cd12  _ZN17CyclicVoltammetry15getCurrentValueEv
+0000c5e2  _ZN17CyclicVoltammetry9NextValueEv       
+0000c8de  _ZN17CyclicVoltammetryC1Ev               
+0000c8de  _ZN17CyclicVoltammetryC2Ev               
+0000c314  _ZN3ASV11processDataEPci                 
+0000cc88  _ZN3ASV13StopConditionEv                 
+0000cd18  _ZN3ASV15getCurrentValueEv               
+0000c884  _ZN3ASV9NextValueEv                      
+0000c934  _ZN3ASVC1Ev                              
+0000c934  _ZN3ASVC2Ev                              
+0000ca96  _ZN3msp3ADC17readSingleChannelEj         
+0000cb6a  _ZN3msp3ADC4initEh                       
+0000cd46  _ZN3msp3ADCC1Ev                          
+0000cd46  _ZN3msp3ADCC2Ev                          
+0000c666  _ZN3msp4uart4initEm                      
+0000ccd2  _ZN3msp4uart7putcharEi                   
+0000cbbe  _ZN3msp4uartC1Ev                         
+0000cbbe  _ZN3msp4uartC2Ev                         
+0000c3d4  _ZN3msp5SWASV11processDataEPci           
+0000cd36  _ZN3msp5SWASV13StopConditionEv           
+0000cd1e  _ZN3msp5SWASV15getCurrentValueEv         
+0000cd24  _ZN3msp5SWASV9NextValueEv                
+0000ca62  _ZN3msp5SWASVC1Ev                        
+0000ca62  _ZN3msp5SWASVC2Ev                        
+0000cbec  _ZN7DAC_R2R8setValueEi                   
+0000cc16  _ZN7DAC_R2RC1Ev                          
+0000cc16  _ZN7DAC_R2RC2Ev                          
+0000cd2a  _ZN9Technique9isRunningEv                
+0000cd48  _ZNSt9type_infoD1Ev                      
+0000cd48  _ZNSt9type_infoD2Ev                      
+0000cd30  _ZSt17__throw_bad_allocv                 
+0000ce76  _ZTI13DAC_generator                      
+0000ce40  _ZTI17CyclicVoltammetry                  
+0000ce46  _ZTI3ASV                                 
+0000ce4c  _ZTI7DAC_R2R                             
+0000ce7a  _ZTI9Technique                           
+0000ce52  _ZTIN10__cxxabiv117__class_type_infoE    
+0000ce58  _ZTIN10__cxxabiv120__si_class_type_infoE 
+0000ce5e  _ZTIN3msp5SWASVE                         
+0000ce7e  _ZTISt9type_info                         
+0000cdbe  _ZTS13DAC_generator                      
+0000cd96  _ZTS17CyclicVoltammetry                  
+0000ce70  _ZTS3ASV                                 
+0000ce26  _ZTS7DAC_R2R                             
+0000ce1a  _ZTS9Technique                           
+0000cd74  _ZTSN10__cxxabiv117__class_type_infoE    
+0000cd4e  _ZTSN10__cxxabiv120__si_class_type_infoE 
+0000cdce  _ZTSN3msp5SWASVE                         
+0000cddc  _ZTSSt9type_info                         
+0000ce64  _ZTV13DAC_generator                      
+0000cdea  _ZTV17CyclicVoltammetry                  
+0000cdf6  _ZTV3ASV                                 
+0000ce6a  _ZTV7DAC_R2R                             
+0000ce02  _ZTV9Technique                           
+0000ce30  _ZTVN10__cxxabiv117__class_type_infoE    
+0000ce38  _ZTVN10__cxxabiv120__si_class_type_infoE 
+0000ce0e  _ZTVN3msp5SWASVE                         
+0000cce0  _ZdlPv                                   
+0000cd3a  _ZdlPvj                                  
+0000cb46  _Znwj                                    
+00000400  __STACK_END                              
+00000050  __STACK_SIZE                             
+00000050  __SYSMEM_SIZE                            
+0000ce9c  __TI_CINIT_Base                          
+0000cea4  __TI_CINIT_Limit                         
+0000ce92  __TI_Handler_Table_Base                  
+0000ce98  __TI_Handler_Table_Limit                 
+0000ce82  __TI_INITARRAY_Base                      
+0000ce84  __TI_INITARRAY_Limit                     
+0000cd02  __TI_ISR_TRAP                            
+0000c828  __TI_auto_init_nobinit                   
+0000c6e4  __TI_decompress_lzss                     
+0000cc64  __TI_decompress_none                     
+0000ffe0  __TI_int00                               
+0000ffe4  __TI_int02                               
+0000ffe6  __TI_int03                               
+0000ffea  __TI_int05                               
+0000ffec  __TI_int06                               
+0000ffee  __TI_int07                               
+0000fff0  __TI_int08                               
+0000fff2  __TI_int09                               
+0000fff4  __TI_int10                               
+0000fff6  __TI_int11                               
+0000fff8  __TI_int12                               
+0000fffa  __TI_int13                               
+0000fffc  __TI_int14                               
+ffffffff  __TI_pprof_out_hndl                      
+ffffffff  __TI_prof_data_size                      
+ffffffff  __TI_prof_data_start                     
+0000cc2a  __TI_zero_init_nomemset                  
+0000cd3e  __abort_execution                        
+ffffffff  __c_args__                               
+0000ccfa  __cxa_pure_virtual                       
+0000cca4  __mspabi_func_epilog_1                   
+0000cca2  __mspabi_func_epilog_2                   
+0000cca0  __mspabi_func_epilog_3                   
+0000cc9e  __mspabi_func_epilog_4                   
+0000cc9c  __mspabi_func_epilog_5                   
+0000cc9a  __mspabi_func_epilog_6                   
+0000cc98  __mspabi_func_epilog_7                   
+0000cc3e  __mspabi_mpyi                            
+0000cc3e  __mspabi_mpyi_sw                         
+0000caf2  __mspabi_slli                            
+0000cb1a  __mspabi_slli_1                          
+0000cb08  __mspabi_slli_10                         
+0000cb06  __mspabi_slli_11                         
+0000cb04  __mspabi_slli_12                         
+0000cb02  __mspabi_slli_13                         
+0000cb00  __mspabi_slli_14                         
+0000cafe  __mspabi_slli_15                         
+0000cb18  __mspabi_slli_2                          
+0000cb16  __mspabi_slli_3                          
+0000cb14  __mspabi_slli_4                          
+0000cb12  __mspabi_slli_5                          
+0000cb10  __mspabi_slli_6                          
+0000cb0e  __mspabi_slli_7                          
+0000cb0c  __mspabi_slli_8                          
+0000cb0a  __mspabi_slli_9                          
+0000cac6  __mspabi_srai                            
+0000caee  __mspabi_srai_1                          
+0000cadc  __mspabi_srai_10                         
+0000cada  __mspabi_srai_11                         
+0000cad8  __mspabi_srai_12                         
+0000cad6  __mspabi_srai_13                         
+0000cad4  __mspabi_srai_14                         
+0000cad2  __mspabi_srai_15                         
+0000caec  __mspabi_srai_2                          
+0000caea  __mspabi_srai_3                          
+0000cae8  __mspabi_srai_4                          
+0000cae6  __mspabi_srai_5                          
+0000cae4  __mspabi_srai_6                          
+0000cae2  __mspabi_srai_7                          
+0000cae0  __mspabi_srai_8                          
+0000cade  __mspabi_srai_9                          
+0000c9d0  __mspabi_srli                            
+0000ca16  __mspabi_srli_1                          
+0000c9f2  __mspabi_srli_10                         
+0000c9ee  __mspabi_srli_11                         
+0000c9ea  __mspabi_srli_12                         
+0000c9e6  __mspabi_srli_13                         
+0000c9e2  __mspabi_srli_14                         
+0000c9de  __mspabi_srli_15                         
+0000ca12  __mspabi_srli_2                          
+0000ca0e  __mspabi_srli_3                          
+0000ca0a  __mspabi_srli_4                          
+0000ca06  __mspabi_srli_5                          
+0000ca02  __mspabi_srli_6                          
+0000c9fe  __mspabi_srli_7                          
+0000c9fa  __mspabi_srli_8                          
+0000c9f6  __mspabi_srli_9                          
+0000c7c8  __sti___8_main_cpp_medidas               
+0000cb86  _c_int00_noargs                          
+00000270  _lock                                    
+0000cd4a  _nop                                     
+0000fffe  _reset_vector                            
+000003b0  _stack                                   
+00000200  _sys_memory                              
+0000cd4c  _system_post_cinit                       
+0000cd42  _system_pre_init                         
+00000272  _unlock                                  
+0000cd30  abort                                    
+0000c148  aligned_alloc                            
+00000264  analog                                   
+0000025a  data                                     
+0000026c  data_send                                
+0000c242  free                                     
+0000026a  i                                        
+0000c984  main                                     
+0000cd0a  malloc                                   
+00000250  medidas                                  
+0000c148  memalign                                 
+0000cc76  memcpy                                   
+00000262  nextval                                  
+00000256  serial                                   
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                     
+-------   ----                                     
+00000000  IE1                                      
+00000001  IE2                                      
+00000002  IFG1                                     
+00000003  IFG2                                     
+00000010  P3REN                                    
+00000018  P3IN                                     
+00000019  P3OUT                                    
+0000001a  P3DIR                                    
+0000001b  P3SEL                                    
+00000020  P1IN                                     
+00000021  P1OUT                                    
+00000022  P1DIR                                    
+00000023  P1IFG                                    
+00000024  P1IES                                    
+00000025  P1IE                                     
+00000026  P1SEL                                    
+00000027  P1REN                                    
+00000028  P2IN                                     
+00000029  P2OUT                                    
+0000002a  P2DIR                                    
+0000002b  P2IFG                                    
+0000002c  P2IES                                    
+0000002d  P2IE                                     
+0000002e  P2SEL                                    
+0000002f  P2REN                                    
+00000041  P1SEL2                                   
+00000042  P2SEL2                                   
+00000043  P3SEL2                                   
+00000048  ADC10DTC0                                
+00000049  ADC10DTC1                                
+0000004a  ADC10AE0                                 
+00000050  __STACK_SIZE                             
+00000050  __SYSMEM_SIZE                            
+00000053  BCSCTL3                                  
+00000056  DCOCTL                                   
+00000057  BCSCTL1                                  
+00000058  BCSCTL2                                  
+00000059  CACTL1                                   
+0000005a  CACTL2                                   
+0000005b  CAPD                                     
+0000005d  UCA0ABCTL                                
+0000005e  UCA0IRTCTL                               
+0000005f  UCA0IRRCTL                               
+00000060  UCA0CTL0                                 
+00000061  UCA0CTL1                                 
+00000062  UCA0BR0                                  
+00000063  UCA0BR1                                  
+00000064  UCA0MCTL                                 
+00000065  UCA0STAT                                 
+00000066  UCA0RXBUF                                
+00000067  UCA0TXBUF                                
+00000068  UCB0CTL0                                 
+00000069  UCB0CTL1                                 
+0000006a  UCB0BR0                                  
+0000006b  UCB0BR1                                  
+0000006c  UCB0I2CIE                                
+0000006d  UCB0STAT                                 
+0000006e  UCB0RXBUF                                
+0000006f  UCB0TXBUF                                
+00000118  UCB0I2COA                                
+0000011a  UCB0I2CSA                                
+0000011e  TA1IV                                    
+00000120  WDTCTL                                   
+00000128  FCTL1                                    
+0000012a  FCTL2                                    
+0000012c  FCTL3                                    
+0000012e  TA0IV                                    
+00000160  TA0CTL                                   
+00000162  TA0CCTL0                                 
+00000164  TA0CCTL1                                 
+00000166  TA0CCTL2                                 
+00000170  TA0R                                     
+00000172  TA0CCR0                                  
+00000174  TA0CCR1                                  
+00000176  TA0CCR2                                  
+00000180  TA1CTL                                   
+00000182  TA1CCTL0                                 
+00000184  TA1CCTL1                                 
+00000186  TA1CCTL2                                 
+00000190  TA1R                                     
+00000192  TA1CCR0                                  
+00000194  TA1CCR1                                  
+00000196  TA1CCR2                                  
+000001b0  ADC10CTL0                                
+000001b2  ADC10CTL1                                
+000001b4  ADC10MEM                                 
+000001bc  ADC10SA                                  
+00000200  _sys_memory                              
+00000250  medidas                                  
+00000256  serial                                   
+0000025a  data                                     
+00000262  nextval                                  
+00000264  analog                                   
+00000266  SelectedTechnique                        
+00000268  ADC_data                                 
+0000026a  i                                        
+0000026c  data_send                                
+00000270  _lock                                    
+00000272  _unlock                                  
+000003b0  _stack                                   
+00000400  __STACK_END                              
+000010c0  TLV_CHECKSUM                             
+000010da  TLV_ADC10_1_TAG                          
+000010db  TLV_ADC10_1_LEN                          
+000010f6  TLV_DCO_30_TAG                           
+000010f7  TLV_DCO_30_LEN                           
+000010f8  CALDCO_16MHZ                             
+000010f9  CALBC1_16MHZ                             
+000010fa  CALDCO_12MHZ                             
+000010fb  CALBC1_12MHZ                             
+000010fc  CALDCO_8MHZ                              
+000010fd  CALBC1_8MHZ                              
+000010fe  CALDCO_1MHZ                              
+000010ff  CALBC1_1MHZ                              
+0000c000  _Z16Timer_A_CCR0_ISRv                    
+0000c148  aligned_alloc                            
+0000c148  memalign                                 
+0000c242  free                                     
+0000c314  _ZN3ASV11processDataEPci                 
+0000c3d4  _ZN3msp5SWASV11processDataEPci           
+0000c494  _ZN17CyclicVoltammetry11processDataEPci  
+0000c552  _Z11USCI0RX_ISRv                         
+0000c5e2  _ZN17CyclicVoltammetry9NextValueEv       
+0000c666  _ZN3msp4uart4initEm                      
+0000c6e4  __TI_decompress_lzss                     
+0000c7c8  __sti___8_main_cpp_medidas               
+0000c828  __TI_auto_init_nobinit                   
+0000c884  _ZN3ASV9NextValueEv                      
+0000c8de  _ZN17CyclicVoltammetryC1Ev               
+0000c8de  _ZN17CyclicVoltammetryC2Ev               
+0000c934  _ZN3ASVC1Ev                              
+0000c934  _ZN3ASVC2Ev                              
+0000c984  main                                     
+0000c9d0  __mspabi_srli                            
+0000c9de  __mspabi_srli_15                         
+0000c9e2  __mspabi_srli_14                         
+0000c9e6  __mspabi_srli_13                         
+0000c9ea  __mspabi_srli_12                         
+0000c9ee  __mspabi_srli_11                         
+0000c9f2  __mspabi_srli_10                         
+0000c9f6  __mspabi_srli_9                          
+0000c9fa  __mspabi_srli_8                          
+0000c9fe  __mspabi_srli_7                          
+0000ca02  __mspabi_srli_6                          
+0000ca06  __mspabi_srli_5                          
+0000ca0a  __mspabi_srli_4                          
+0000ca0e  __mspabi_srli_3                          
+0000ca12  __mspabi_srli_2                          
+0000ca16  __mspabi_srli_1                          
+0000ca1c  _Z10board_initv                          
+0000ca62  _ZN3msp5SWASVC1Ev                        
+0000ca62  _ZN3msp5SWASVC2Ev                        
+0000ca96  _ZN3msp3ADC17readSingleChannelEj         
+0000cac6  __mspabi_srai                            
+0000cad2  __mspabi_srai_15                         
+0000cad4  __mspabi_srai_14                         
+0000cad6  __mspabi_srai_13                         
+0000cad8  __mspabi_srai_12                         
+0000cada  __mspabi_srai_11                         
+0000cadc  __mspabi_srai_10                         
+0000cade  __mspabi_srai_9                          
+0000cae0  __mspabi_srai_8                          
+0000cae2  __mspabi_srai_7                          
+0000cae4  __mspabi_srai_6                          
+0000cae6  __mspabi_srai_5                          
+0000cae8  __mspabi_srai_4                          
+0000caea  __mspabi_srai_3                          
+0000caec  __mspabi_srai_2                          
+0000caee  __mspabi_srai_1                          
+0000caf2  __mspabi_slli                            
+0000cafe  __mspabi_slli_15                         
+0000cb00  __mspabi_slli_14                         
+0000cb02  __mspabi_slli_13                         
+0000cb04  __mspabi_slli_12                         
+0000cb06  __mspabi_slli_11                         
+0000cb08  __mspabi_slli_10                         
+0000cb0a  __mspabi_slli_9                          
+0000cb0c  __mspabi_slli_8                          
+0000cb0e  __mspabi_slli_7                          
+0000cb10  __mspabi_slli_6                          
+0000cb12  __mspabi_slli_5                          
+0000cb14  __mspabi_slli_4                          
+0000cb16  __mspabi_slli_3                          
+0000cb18  __mspabi_slli_2                          
+0000cb1a  __mspabi_slli_1                          
+0000cb46  _Znwj                                    
+0000cb6a  _ZN3msp3ADC4initEh                       
+0000cb86  _c_int00_noargs                          
+0000cbbe  _ZN3msp4uartC1Ev                         
+0000cbbe  _ZN3msp4uartC2Ev                         
+0000cbd6  _ZN10__cxxabiv120__si_class_type_infoD0Ev
+0000cbec  _ZN7DAC_R2R8setValueEi                   
+0000cc02  _ZN10__cxxabiv117__class_type_infoD0Ev   
+0000cc16  _ZN7DAC_R2RC1Ev                          
+0000cc16  _ZN7DAC_R2RC2Ev                          
+0000cc2a  __TI_zero_init_nomemset                  
+0000cc3e  __mspabi_mpyi                            
+0000cc3e  __mspabi_mpyi_sw                         
+0000cc52  _Z11initTimer_Av                         
+0000cc64  __TI_decompress_none                     
+0000cc76  memcpy                                   
+0000cc88  _ZN3ASV13StopConditionEv                 
+0000cc98  __mspabi_func_epilog_7                   
+0000cc9a  __mspabi_func_epilog_6                   
+0000cc9c  __mspabi_func_epilog_5                   
+0000cc9e  __mspabi_func_epilog_4                   
+0000cca0  __mspabi_func_epilog_3                   
+0000cca2  __mspabi_func_epilog_2                   
+0000cca4  __mspabi_func_epilog_1                   
+0000cca8  _ZN10__cxxabiv117__class_type_infoD1Ev   
+0000cca8  _ZN10__cxxabiv117__class_type_infoD2Ev   
+0000ccb6  _ZN10__cxxabiv120__si_class_type_infoD1Ev
+0000ccb6  _ZN10__cxxabiv120__si_class_type_infoD2Ev
+0000ccc4  _ZN17CyclicVoltammetry13StopConditionEv  
+0000ccd2  _ZN3msp4uart7putcharEi                   
+0000cce0  _ZdlPv                                   
+0000ccea  _Z9ADC10_ISRv                            
+0000ccf2  _ZN13DAC_generatorC1Ev                   
+0000ccf2  _ZN13DAC_generatorC2Ev                   
+0000ccfa  __cxa_pure_virtual                       
+0000cd02  __TI_ISR_TRAP                            
+0000cd0a  malloc                                   
+0000cd12  _ZN17CyclicVoltammetry15getCurrentValueEv
+0000cd18  _ZN3ASV15getCurrentValueEv               
+0000cd1e  _ZN3msp5SWASV15getCurrentValueEv         
+0000cd24  _ZN3msp5SWASV9NextValueEv                
+0000cd2a  _ZN9Technique9isRunningEv                
+0000cd30  C$$EXIT                                  
+0000cd30  _ZSt17__throw_bad_allocv                 
+0000cd30  abort                                    
+0000cd36  _ZN3msp5SWASV13StopConditionEv           
+0000cd3a  _ZdlPvj                                  
+0000cd3e  __abort_execution                        
+0000cd42  _system_pre_init                         
+0000cd46  _ZN3msp3ADCC1Ev                          
+0000cd46  _ZN3msp3ADCC2Ev                          
+0000cd48  _ZNSt9type_infoD1Ev                      
+0000cd48  _ZNSt9type_infoD2Ev                      
+0000cd4a  _nop                                     
+0000cd4c  _system_post_cinit                       
+0000cd4e  _ZTSN10__cxxabiv120__si_class_type_infoE 
+0000cd74  _ZTSN10__cxxabiv117__class_type_infoE    
+0000cd96  _ZTS17CyclicVoltammetry                  
+0000cdbe  _ZTS13DAC_generator                      
+0000cdce  _ZTSN3msp5SWASVE                         
+0000cddc  _ZTSSt9type_info                         
+0000cdea  _ZTV17CyclicVoltammetry                  
+0000cdf6  _ZTV3ASV                                 
+0000ce02  _ZTV9Technique                           
+0000ce0e  _ZTVN3msp5SWASVE                         
+0000ce1a  _ZTS9Technique                           
+0000ce26  _ZTS7DAC_R2R                             
+0000ce30  _ZTVN10__cxxabiv117__class_type_infoE    
+0000ce38  _ZTVN10__cxxabiv120__si_class_type_infoE 
+0000ce40  _ZTI17CyclicVoltammetry                  
+0000ce46  _ZTI3ASV                                 
+0000ce4c  _ZTI7DAC_R2R                             
+0000ce52  _ZTIN10__cxxabiv117__class_type_infoE    
+0000ce58  _ZTIN10__cxxabiv120__si_class_type_infoE 
+0000ce5e  _ZTIN3msp5SWASVE                         
+0000ce64  _ZTV13DAC_generator                      
+0000ce6a  _ZTV7DAC_R2R                             
+0000ce70  _ZTS3ASV                                 
+0000ce76  _ZTI13DAC_generator                      
+0000ce7a  _ZTI9Technique                           
+0000ce7e  _ZTISt9type_info                         
+0000ce82  __TI_INITARRAY_Base                      
+0000ce84  __TI_INITARRAY_Limit                     
+0000ce92  __TI_Handler_Table_Base                  
+0000ce98  __TI_Handler_Table_Limit                 
+0000ce9c  __TI_CINIT_Base                          
+0000cea4  __TI_CINIT_Limit                         
+0000ffe0  __TI_int00                               
+0000ffe4  __TI_int02                               
+0000ffe6  __TI_int03                               
+0000ffea  __TI_int05                               
+0000ffec  __TI_int06                               
+0000ffee  __TI_int07                               
+0000fff0  __TI_int08                               
+0000fff2  __TI_int09                               
+0000fff4  __TI_int10                               
+0000fff6  __TI_int11                               
+0000fff8  __TI_int12                               
+0000fffa  __TI_int13                               
+0000fffc  __TI_int14                               
+0000fffe  _reset_vector                            
+ffffffff  __TI_pprof_out_hndl                      
+ffffffff  __TI_prof_data_size                      
+ffffffff  __TI_prof_data_start                     
+ffffffff  __c_args__                               
+
+[290 symbols]

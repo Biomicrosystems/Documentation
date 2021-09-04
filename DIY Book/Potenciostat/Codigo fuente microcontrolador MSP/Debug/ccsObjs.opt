@@ -1,0 +1,1 @@
+"./ASV.obj" "./ChronoA.obj" "./CyclicVoltammetry.obj" "./DACR2R.obj" "./DACgenerator.obj" "./SWASV.obj" "./Technique.obj" "./boardMSP.obj" "./main.obj" "../lnk_msp430g2553.cmd" -llibc.a -l"C:/Users/Camilo/OneDrive - Universidad de los Andes/Shared/workspace_ccs/MSP430lib/Debug/MSP430lib.lib" 

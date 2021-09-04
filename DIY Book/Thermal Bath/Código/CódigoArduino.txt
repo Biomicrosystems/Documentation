@@ -1,0 +1,195 @@
+#include <PID_v1.h>
+#include <max6675.h>
+#include <Wire.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+//////
+int thermoDO = 11;
+int thermoCS = 10;
+int thermoCLK = 13;
+float tempe;
+float tol = 0.5;
+const int firing = 9;
+const int zc = 2;
+int BombaAgua = 3; 
+
+OneWire ourWire(4); //Se establece el pin4 como bus de salida
+DallasTemperature sensor(&ourWire); //Se declara la variable, en este caso sera sensor
+
+String dataLabel1 = "Temperatura baño";
+String dataLabel2 = "Temperatura camas";
+bool label = true;
+
+MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
+
+double kp = 900;   double ki = 460;   double kd = 460;
+double Setpoint,Setpoint_ini , Input, Output;
+PID myPID(&Input, &Output, &Setpoint, kp, ki, kd, REVERSE);
+
+String temp;
+double temp0;
+int pinLuz=5;
+
+void setup() {
+  Setpoint = 0; 
+Setpoint_ini=0;
+
+  
+  myPID.SetMode(AUTOMATIC);
+  myPID.SetOutputLimits(0, 6500);
+  
+
+  Serial.begin(115200);
+  sensor.begin(); //Se inicia el sensor
+  pinMode(firing, OUTPUT);
+  pinMode(zc, INPUT);
+  attachInterrupt(digitalPinToInterrupt(zc), angle, FALLING);
+  pinMode(BombaAgua, OUTPUT); // initialize the digital pin as an output.
+  Serial.println("TempBaño TempCamas ");
+  pinMode(pinLuz,OUTPUT); 
+ }
+
+void loop() {
+  if (Serial.available()) {
+    temp = Serial.readStringUntil('\n');
+    
+    if (temp.startsWith("luz")) { 
+      String valor1="null"; 
+      //Serial.println ("Received: " + temp );
+      valor1 = temp.substring(4);
+      
+      if(valor1 == "on")   digitalWrite(pinLuz,HIGH);
+      else if(valor1 == "off") digitalWrite(pinLuz,LOW); 
+//      Serial.println(valor);
+    }
+////////////////////////........................................................
+
+else if (temp.startsWith("temp")) { 
+      String valor="null";
+     // Serial.println ("Received: " + temp );
+      valor= temp.substring(5);
+      Setpoint_ini = valor.toDouble();
+     // Serial.println ("Received: " + temp );
+      //Serial.println (Setpoint );
+
+}     ////
+
+else {
+      temp = "Received: " + temp + ", command not found; hlp for list";
+      Serial.println(temp);
+    }
+  }
+
+    tempe = thermocouple.readCelsius(); delay(178);
+    Input = tempe; // IMPORTANTE!: Definir la entrada del sistema
+    myPID.Compute(); // Calcular acción de control
+    digitalWrite(firing, LOW);
+
+ sensor.requestTemperatures(); //Se solicita leer la temperatura
+ float temp1= sensor.getTempCByIndex(0); //Se obtiene la temperatura en ºC
+ digitalWrite(firing, LOW);
+
+if (Setpoint_ini <= 25){  //// Temp 1
+  Setpoint = Setpoint_ini + 2;
+
+  if ((tempe >= Setpoint - 1) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+ }
+  }
+  
+else if (Setpoint_ini<=30 && Setpoint_ini >25){ ////Temp 2
+  Setpoint = Setpoint_ini + 3;
+
+  if ((tempe >= Setpoint - 0.25) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+  }
+
+}
+else if (Setpoint_ini<=35 && Setpoint_ini >30){ ////Temp 3
+  Setpoint = Setpoint_ini + 2.8;
+
+  if ((tempe >= Setpoint - 0.5) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+ }
+  }
+
+  else if (Setpoint_ini<=40 && Setpoint_ini >35){ /// Temp 4
+  Setpoint = Setpoint_ini + 5;
+
+  if ((tempe >= Setpoint - 0.5) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+ }
+  }
+
+  else if (Setpoint_ini<=45 && Setpoint_ini >40){ ///Temp 5
+  Setpoint = Setpoint_ini + 5;
+
+  if ((tempe >= Setpoint - 0.5) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+ }
+  }
+
+  else if (Setpoint_ini<=50 && Setpoint_ini >45){ ///// Temp 6
+  Setpoint = Setpoint_ini + 5;
+
+  if ((tempe >= Setpoint - 1) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+  }
+  }
+  else if (Setpoint_ini<=65 && Setpoint_ini >50){ /// Temp 7
+  Setpoint = Setpoint_ini + 5;
+
+  if ((tempe >= Setpoint - 1) && (Setpoint_ini!=0) ) {
+    digitalWrite(BombaAgua, HIGH); // turn the motor on by making the voltage HIGH
+    }
+ else {
+    digitalWrite(BombaAgua, LOW);  // turn the motor off by making the voltge LOW
+ }
+  }
+ 
+ if (Setpoint_ini!=0){
+ Serial.print(tempe); 
+ Serial.print(" ");
+ Serial.println(temp1);
+ delayMicroseconds(10);
+
+}
+  
+
+
+////////////////////////........................................................
+}
+
+
+
+void angle() {
+  if (tempe > Setpoint && tempe - Setpoint >= 0.25) {
+    digitalWrite(firing, LOW);
+  }
+  
+    else if (Setpoint>tempe){
+      delayMicroseconds(Output);
+      digitalWrite(firing, HIGH);
+      delayMicroseconds(500);
+      digitalWrite(firing, LOW);
+    }
+  }

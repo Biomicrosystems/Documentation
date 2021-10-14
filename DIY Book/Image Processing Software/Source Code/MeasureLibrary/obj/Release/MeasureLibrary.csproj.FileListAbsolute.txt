@@ -1,0 +1,15 @@
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\bin\Release\MeasureLibrary.dll
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\bin\Release\MeasureLibrary.pdb
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.Measure_Template.resources
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.MeasureWindow.resources
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.csproj.GenerateResource.Cache
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.dll
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.pdb
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\bin\Release\MeasureLibrary.dll
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\bin\Release\MeasureLibrary.pdb
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.Measure_Template.resources
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.MeasureWindow.resources
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.csproj.GenerateResource.Cache
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.dll
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.pdb
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Release\MeasureLibrary.csprojResolveAssemblyReference.cache

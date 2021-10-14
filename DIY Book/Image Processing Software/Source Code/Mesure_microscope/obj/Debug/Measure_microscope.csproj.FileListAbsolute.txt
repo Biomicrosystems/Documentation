@@ -1,0 +1,15 @@
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Debug\Measure_microscope.exe.config
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Debug\Measure_microscope.exe
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Debug\Measure_microscope.pdb
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Debug\MeasureLibrary.dll
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Debug\MeasureLibrary.pdb
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.csprojResolveAssemblyReference.cache
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Mesure_microscope.Form1.resources
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Mesure_microscope.Form2.resources
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.Properties.Resources.resources
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.csproj.GenerateResource.Cache
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.exe
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.pdb
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Debug\Measure_microscope.exe.config
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.exe
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Debug\Measure_microscope.pdb

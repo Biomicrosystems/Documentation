@@ -1,0 +1,23 @@
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\bin\Debug\MeasureLibrary.dll
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\bin\Debug\MeasureLibrary.pdb
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.Measure_Template.resources
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.MeasureWindow.resources
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.csproj.GenerateResource.Cache
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.dll
+C:\Users\crhistian\Documents\Visual Studio 2015\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.pdb
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\bin\Debug\MeasureLibrary.dll
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\bin\Debug\MeasureLibrary.pdb
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.csprojResolveAssemblyReference.cache
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.Measure_Template.resources
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.MeasureWindow.resources
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.csproj.GenerateResource.Cache
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.dll
+C:\Users\PC_Desk\Dropbox\Code\Asus\Projects\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.pdb
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\bin\Debug\MeasureLibrary.dll
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\bin\Debug\MeasureLibrary.pdb
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.csprojResolveAssemblyReference.cache
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.Measure_Template.resources
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.MeasureWindow.resources
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.csproj.GenerateResource.Cache
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.dll
+C:\Users\PC_Desk\Dropbox\Manuales gt\Programas\Mesure_microscope\MeasureLibrary\obj\Debug\MeasureLibrary.pdb

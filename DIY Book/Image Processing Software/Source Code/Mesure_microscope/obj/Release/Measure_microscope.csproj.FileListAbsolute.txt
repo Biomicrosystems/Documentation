@@ -1,0 +1,12 @@
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Release\Measure_microscope.exe.config
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Release\Measure_microscope.exe
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Release\Measure_microscope.pdb
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Release\MeasureLibrary.dll
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\bin\Release\MeasureLibrary.pdb
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Measure_microscope.csprojResolveAssemblyReference.cache
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Mesure_microscope.Form1.resources
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Mesure_microscope.Form2.resources
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Measure_microscope.Properties.Resources.resources
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Measure_microscope.csproj.GenerateResource.Cache
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Measure_microscope.exe
+C:\Users\crhistian\Dropbox\Manuales gt\Programas\Mesure_microscope\Mesure_microscope\obj\Release\Measure_microscope.pdb

@@ -133,7 +133,7 @@ namespace Potentiostat_web
                                 }
 
                                 //Invert current
-                                dato2 = -dato2;
+                                //dato2 = -dato2;
 
                                 var dataADC = new { dat1 = dato1, dat2 = dato2};
                                 if (socket != null)

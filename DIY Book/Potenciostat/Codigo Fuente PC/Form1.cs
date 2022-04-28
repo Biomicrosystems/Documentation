@@ -30,12 +30,16 @@ namespace Potentiostat_web
     };
     public partial class Form1 : Form
     {
+        private double zero_correction = 0.0;
         public Form1()
         {
             InitializeComponent();
             serialPort1.DataReceived += SerialPort1_DataReceived;
             chart1.ChartAreas.FirstOrDefault().AxisX.LabelStyle.Format = "#.###";
             chart2.ChartAreas.FirstOrDefault().AxisX.LabelStyle.Format = "#.###";
+            JObject configurations = JObject.Parse(File.ReadAllText(@"appConfig.json"));
+            zero_correction = Convert.ToDouble(configurations["zero_correction"]);
+            tbx_server_url.Text = Convert.ToString(configurations["RemoteServer"]);
         }
 
         #region Potentiostat
@@ -63,7 +67,6 @@ namespace Potentiostat_web
             SetFinalValue = 0x12,
             ACK = 0xB0,
             ENDRUN = 0xB1
-
         }
         #endregion
         #region Methods
@@ -133,9 +136,9 @@ namespace Potentiostat_web
                                 }
 
                                 //Invert current
-                                //dato2 = -dato2;
+                                dato2 = dato2 + zero_correction; // Zero correction
 
-                                var dataADC = new { dat1 = dato1, dat2 = dato2};
+                                var dataADC = new { dat1 = dato1, dat2 = dato2 };
                                 if (socket != null)
                                     socket.Emit("ADC_values", JsonConvert.SerializeObject(dataADC));
 

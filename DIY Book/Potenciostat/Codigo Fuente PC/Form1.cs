@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.SignalR.Client;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Quobject.SocketIoClientDotNet.Client;
 using System;
@@ -30,16 +31,12 @@ namespace Potentiostat_web
     };
     public partial class Form1 : Form
     {
-        private double zero_correction = 0.0;
         public Form1()
         {
             InitializeComponent();
             serialPort1.DataReceived += SerialPort1_DataReceived;
             chart1.ChartAreas.FirstOrDefault().AxisX.LabelStyle.Format = "#.###";
             chart2.ChartAreas.FirstOrDefault().AxisX.LabelStyle.Format = "#.###";
-            JObject configurations = JObject.Parse(File.ReadAllText(@"appConfig.json"));
-            zero_correction = Convert.ToDouble(configurations["zero_correction"]);
-            tbx_server_url.Text = Convert.ToString(configurations["RemoteServer"]);
         }
 
         #region Potentiostat
@@ -67,6 +64,7 @@ namespace Potentiostat_web
             SetFinalValue = 0x12,
             ACK = 0xB0,
             ENDRUN = 0xB1
+
         }
         #endregion
         #region Methods
@@ -81,7 +79,7 @@ namespace Potentiostat_web
             }
         }
 
-        private void SerialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        private async void SerialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             try
             {
@@ -136,11 +134,26 @@ namespace Potentiostat_web
                                 }
 
                                 //Invert current
-                                dato2 = dato2 + zero_correction; // Zero correction
+                                dato2 = dato2+1.25;
 
                                 var dataADC = new { dat1 = dato1, dat2 = dato2 };
                                 if (socket != null)
                                     socket.Emit("ADC_values", JsonConvert.SerializeObject(dataADC));
+
+                                if (connection != null)
+                                {
+                                    if (connection.State == HubConnectionState.Connected)
+                                    {
+                                        try
+                                        {
+                                            _ = connection.InvokeAsync("SendData", dato1.ToString().Replace(',', '.'), dato2.ToString().Replace(',', '.'));
+                                        }
+                                        catch (Exception ex)
+                                        {
+
+                                        }
+                                    }
+                                }
 
                                 if (chart1.InvokeRequired)
                                 {
@@ -515,21 +528,82 @@ namespace Potentiostat_web
         public delegate void UpdateTextMethod(string text);
 
         #endregion
+        HubConnection connection;
 
         #region Methods
         private void btn_start_socket_Click(object sender, EventArgs e)
         {
-            if (btn_start_socket.Text == "Start Socket")
+
+            if (btn_start_socket.Text == "Connect")
             {
+                connection = new HubConnectionBuilder()
+               .WithUrl(tbx_server_url.Text + "/potentiostathub")
+               .Build();
+
+                _ = ConnectionManagerAsync();
                 socketIoManager();
-                var data = new { name = "potenciostato" };
-                socket.Emit("device", JsonConvert.SerializeObject(data));
-                btn_start_socket.Text = "Stop Socket";
+                //var data = new { name = "potenciostato" };
+                //socket.Emit("device", JsonConvert.SerializeObject(data));
+
             }
             else
             {
-                socket.Disconnect();
-                btn_start_socket.Text = "Start Socket";
+                if (connection.State == HubConnectionState.Connected)
+                {
+                    try
+                    {
+                        _ = connection.StopAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Test");
+                    }
+                    btn_start_socket.Text = "Connect";
+                    UpdateStatus("Remote: Disconnected");
+                }
+                else
+                {
+                    if (connection.State== HubConnectionState.Disconnected)
+                    {
+                        try
+                        {
+                            _ = connection.StopAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Test");
+                        }
+                        btn_start_socket.Text = "Connect";
+                        UpdateStatus("Remote: Disconnected");
+                    }
+                }
+                //socket.Disconnect();
+                //btn_start_socket.Text = "Start Socket";
+            }
+        }
+
+        private async Task ConnectionManagerAsync()
+        {
+            connection.On<string, string, string, string, string>("RecieveParameters", (sp, fv, sv, zc, sr) =>
+            {
+                UpdateData(sp, fv, sv, zc, sr);
+            });
+            connection.On<string>("RecieveAction", (Action) =>
+            {
+                setCommand(Action);
+            });
+
+            try
+            {
+                await connection.StartAsync();
+                btn_start_socket.Text = "Disconnect";
+                UpdateStatus("Remote: Connected");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Test");
+                btn_start_socket.Text = "Connect";
+                UpdateStatus("Remote: Disconnected");
             }
         }
 
@@ -604,9 +678,35 @@ namespace Potentiostat_web
                     case "Stop":
                         this.btnStop_Click(null, null);
                         break;
+                    case "Clear":
+                        txtData.Clear();
+                        chart1.Series[0].Points.Clear();
+                        chart1.Series[1].Points.Clear();
+                        chart2.Series[0].Points.Clear();
+                        break;
                     default:
                         break;
                 }
+            }
+        }
+
+        private void UpdateData(string sp, string fv, string sv, string zc, string sr)
+        {
+            if (this.numSP.InvokeRequired)
+            {
+                UpdateTextMethod del = new UpdateTextMethod(UpdateData);
+                this.Invoke(del, new object[] { sp, fv, sv, zc, sr });
+            }
+            else
+            {
+
+                this.numSP.Value = decimal.Parse(sp.Replace('.', ','));
+                this.numFV.Value = decimal.Parse(fv.Replace('.', ','));
+                this.numSV.Value = decimal.Parse(sv.Replace('.', ','));
+                this.numZC.Value = decimal.Parse(zc.Replace('.', ','));
+                this.numSpeed.Value = decimal.Parse(sr.Replace('.', ','));
+
+                btnSendAll_Click(null, null);
             }
         }
 
@@ -631,6 +731,17 @@ namespace Potentiostat_web
                 btnSendAll_Click(null, null);
             }
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void UpdateStatus(string text)
         {
             if (this.statusStrip1.InvokeRequired)

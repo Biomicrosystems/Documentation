@@ -6,4 +6,4 @@
 
 ## Timmy Ensambling:
 
-[Explicación del ensamblaje de Timmy](https://github.com/user/repo/blob/branch/other_file.md)
+[Explicación del ensamblaje de Timmy](https://youtu.be/Spi7KuzpxSM)

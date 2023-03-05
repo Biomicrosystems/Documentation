@@ -1,0 +1,95 @@
+.bg-img {
+    /* The image used */
+    background-image: url("https://raw.githubusercontent.com/Biomicrosystems/Documentation/main/Principal-page-biomicrosystems/Teams-photos/photo-page-areas-teams.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+
+.about-section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 64px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 16px 16px;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 10px 0;
+    padding-left: 200px;
+    padding-right: 200px;
+
+}
+
+.div-colum{
+    display: inline-flex;
+    padding: 15px;
+    gap: 25px;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    max-height: 350px;
+    min-width: 300px;
+    min-height: 350px;
+    display: flow-root;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.content-card{
+  margin: 40px;
+  font-size: 14px;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+.collapsible i {
+  float: right;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: justify;  
+}

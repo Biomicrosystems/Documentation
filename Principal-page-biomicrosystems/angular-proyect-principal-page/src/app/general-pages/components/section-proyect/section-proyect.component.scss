@@ -1,0 +1,159 @@
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("https://raw.githubusercontent.com/Biomicrosystems/Documentation/main/Principal-page-biomicrosystems/Teams-photos/photo-page-principal-sala-limpia.jpg");
+  min-height: 400px;
+}
+
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//Responsive Column Cards
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p {
+  height: 90%;
+  font-size: 17px;
+}
+
+h3{
+  font-size: 22px;
+}
+
+/* Style the counter cards */
+.card {
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 230px;
+  min-height: 200px;
+}
+
+
+.card:hover {
+  background: #f1f1f193;
+  color: #333;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #333,
+    0 0 1px #333,
+    0 0 1px #333,
+    0 0 1px #333;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1)
+}
+
+/* Responsive columns */
+@media screen and (min-width: 400px ) and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (min-width: 600px ) and (max-width: 800px) {
+  .column {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    min-height: 400px;
+    font-size: 12px;
+    min-height: 350px;
+  }
+
+  h3{
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  p{
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 801px ) and (max-width: 1250px) {
+  .column {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    min-height: 400px;
+    font-size: 12px;
+    min-height: 210px;
+  }
+
+  h3{
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  p{
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1251px ) and (max-width: 1470px) {
+  .column {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    min-height: 400px;
+    font-size: 12px;
+    min-height: 210px;
+  }
+
+  h3{
+    font-size: 19px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  p{
+    font-size: 14px;
+  }
+}

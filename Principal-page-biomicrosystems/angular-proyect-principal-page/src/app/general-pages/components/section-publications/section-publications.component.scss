@@ -1,0 +1,99 @@
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("https://raw.githubusercontent.com/Biomicrosystems/Documentation/main/Principal-page-biomicrosystems/Teams-photos/photo-page-principal-publications.jpg");
+    min-height: 300px;
+  }
+
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  //publications
+
+  .container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container img {
+    float: left;
+    border-radius: 50%;
+  }
+  
+  .container span {
+    font-size: 22px;
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding-top: 1px;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+ 
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .information-research{
+    display:grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minMax(
+            250px,
+            1fr
+        )
+    );
+    gap: 70px;
+    padding: 15px;
+}
+
+.card {
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  height: auto;
+  width: 300px;
+}

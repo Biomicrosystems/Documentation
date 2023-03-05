@@ -1,0 +1,117 @@
+.bg-img {
+    /* The image used */
+    background-image: url("https://raw.githubusercontent.com/Biomicrosystems/Documentation/main/Principal-page-biomicrosystems/Teams-photos/photo-page-member-teams.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+
+.about-section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 64px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 16px 16px;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 10px 0;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.img {
+    width: 90%;
+    text-align: center;
+}
+
+.divOurReseaerchers {
+    display: grid;
+    place-items: center;
+}
+
+.information-research {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minMax(250px,
+                1fr));
+    gap: 40px;
+    padding: 15px;
+}
+
+h4 {
+    font-size: 1rem;
+    text-decoration: overline;
+    font-weight: bold;
+    text-align: center;
+}
+
+.audivisual {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+h6 {
+    font-size: 0.97rem;
+    text-align: center;
+}
+
+.oblicue {
+    font-size: 0.97rem;
+    text-align: center;
+    font-style: oblique;
+}
+
+span {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+
+.div-colum {
+    display: inline-flex;
+    padding: 15px;
+    gap: 25px;
+    width: 100%;
+}
+
+
+.card {
+    box-shadow: 0 2px 4px 0 rgba(162, 162, 160, 0.672);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    height: 360px;
+    min-width: 290px;
+    width: auto;
+}
+
+.explications {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+.styles-photos {
+    width: auto;
+    height: 35%;
+    margin-top: 10px;
+    border-radius: 60px;
+    border-radius: 60px;
+}
+
+.area {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: justify;
+}

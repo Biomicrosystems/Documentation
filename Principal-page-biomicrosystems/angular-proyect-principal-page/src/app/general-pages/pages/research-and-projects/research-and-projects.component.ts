@@ -9,9 +9,7 @@ export class ResearchAndProjectsComponent implements OnInit {
 
   coll: HTMLCollectionOf<HTMLElement>;
 
-  constructor(
-    
-  ) { }
+  constructor( ) { }
 
   ngOnInit(): void {
     this.coll = document.getElementsByClassName("collapsible") as HTMLCollectionOf<HTMLElement>;
@@ -31,5 +29,4 @@ export class ResearchAndProjectsComponent implements OnInit {
       });
     }
   }
-
 }

@@ -76,14 +76,12 @@ span {
     font-size: 0.9rem;
 }
 
-
 .div-colum {
     display: inline-flex;
     padding: 15px;
     gap: 25px;
     width: 100%;
 }
-
 
 .card {
     box-shadow: 0 2px 4px 0 rgba(162, 162, 160, 0.672);
@@ -149,7 +147,19 @@ body, html {
     height: 100%;
   }
   
+  .audiovisual{
+    background: rgba(162, 162, 160, 0.672);
+    border-radius: 20px 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  button:hover{
+    background:rgb(255, 210, 0);
+  }
+
   #IndustrialMarketApplications {background-color: white; color: black; }
   #StateArtReasearch {background-color: white; color: black;}
   #DevelopmentEquipmentAndTechnology {background-color: white; color: black;}
   #Graduates {background-color: white; color: black;}
+

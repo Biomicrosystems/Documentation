@@ -10,13 +10,20 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+        const navLinks = document.querySelectorAll('.topnav a');
 
-  // redirectResearchProjects(){}
-  // redirectMembers(){
-  //   this.routerLink="members"
-  // }
-  // redirectContacs(){}
-
+        navLinks.forEach(link => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+    
+            navLinks.forEach(link => {
+              (link as HTMLElement).classList.remove('active-link');
+            });
+    
+            // Agregar la clase "active-link" al enlace activado
+            (event.target as HTMLElement).classList.add('active-link');
+          });
+        });
+      }
 
 }

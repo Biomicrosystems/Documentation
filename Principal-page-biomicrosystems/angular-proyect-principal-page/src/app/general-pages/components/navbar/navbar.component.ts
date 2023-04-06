@@ -6,24 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  routerLink=""
+  routerLink = ""
   constructor() { }
 
   ngOnInit(): void {
-        const navLinks = document.querySelectorAll('.topnav a');
+    const navLinks = document.querySelectorAll('.topnav a');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
 
         navLinks.forEach(link => {
-          link.addEventListener('click', (event) => {
-            event.preventDefault();
-    
-            navLinks.forEach(link => {
-              (link as HTMLElement).classList.remove('active-link');
-            });
-    
-            // Agregar la clase "active-link" al enlace activado
-            (event.target as HTMLElement).classList.add('active-link');
-          });
+          (link as HTMLElement).classList.remove('active-link');
         });
-      }
+
+        // Agregar la clase "active-link" al enlace activado
+        (event.target as HTMLElement).classList.add('active-link');
+      });
+    });
+  }
 
 }

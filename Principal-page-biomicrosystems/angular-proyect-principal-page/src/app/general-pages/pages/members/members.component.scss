@@ -1,13 +1,10 @@
 .bg-img {
-    /* The image used */
     background-image: url("https://raw.githubusercontent.com/Biomicrosystems/Documentation/main/Principal-page-biomicrosystems/Teams-photos/photo-page-member-teams.jpg");
 
-    /* Center and scale the image nicely */
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* Needed to position the navbar */
     position: relative;
 }
 
@@ -114,15 +111,14 @@ span {
     text-align: justify;
 }
 
-/* Set height of body and the document to 100% to enable "full page tabs" */
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     font-family: Arial;
-  }
-  
-  /* Style tab links */
-  .tablink {
+}
+
+.tablink {
     background-color: #555;
     color: white;
     float: left;
@@ -133,33 +129,46 @@ body, html {
     font-size: 17px;
     width: 25%;
     height: 75px;
-  }
-  
-  .tablink:hover {
+}
+
+.tablink:hover {
     background-color: #777;
-  }
-  
-  /* Style the tab content (and add height:100% for full page content) */
-  .tabcontent {
+}
+
+.tabcontent {
     color: white;
     display: none;
     padding: 100px 20px;
     height: 100%;
-  }
-  
-  .audiovisual{
+}
+
+.audiovisual {
     background: rgba(162, 162, 160, 0.672);
     border-radius: 20px 20px;
     font-weight: bold;
     padding: 10px;
-  }
+}
 
-  button:hover{
-    background:rgb(255, 210, 0);
-  }
+button:hover {
+    background: rgb(255, 210, 0);
+}
 
-  #IndustrialMarketApplications {background-color: white; color: black; }
-  #StateArtReasearch {background-color: white; color: black;}
-  #DevelopmentEquipmentAndTechnology {background-color: white; color: black;}
-  #Graduates {background-color: white; color: black;}
+#IndustrialMarketApplications {
+    background-color: white;
+    color: black;
+}
 
+#StateArtReasearch {
+    background-color: white;
+    color: black;
+}
+
+#DevelopmentEquipmentAndTechnology {
+    background-color: white;
+    color: black;
+}
+
+#Graduates {
+    background-color: white;
+    color: black;
+}

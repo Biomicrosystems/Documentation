@@ -6,32 +6,28 @@ body {
     box-sizing: border-box;
 }
 
-/* Position the navbar container inside the image */
 .container {
     position: absolute;
     margin: 20px;
     width: auto;
     padding-left: 50%;
-  }
+}
 
 .bg-img {
     min-height: 380px;
 }
 
-/* Position the navbar container inside the image */
 .container {
     position: absolute;
     margin: 20px;
     width: auto;
 }
 
-/* The navbar */
 .topnav {
     overflow: hidden;
     background-color: #333;
 }
 
-/* Navbar links */
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -43,8 +39,4 @@ body {
 
 .topnav .active {
     background-color: rgb(255, 210, 0);
-  }
-
-
-
-
+}

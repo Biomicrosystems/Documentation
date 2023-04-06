@@ -12,6 +12,7 @@ import { SectionPublicationsComponent } from './components/section-publications/
 import { ResearchAndProjectsComponent } from './pages/research-and-projects/research-and-projects.component';
 import { MembersComponent } from './pages/members/members.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     SectionPublicationsComponent,
     ResearchAndProjectsComponent,
     MembersComponent,
-    ContactComponent
+    ContactComponent,
+    CarouselComponent
     ],
   imports: [
     CommonModule,

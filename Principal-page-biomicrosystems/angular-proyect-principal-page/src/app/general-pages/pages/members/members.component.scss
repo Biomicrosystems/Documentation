@@ -24,6 +24,15 @@
     padding-right: 200px;
 }
 
+@media screen and (max-width: 650px) {
+    .about-section {
+        width: 100%;
+        display: block;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
 .img {
     width: 90%;
     text-align: center;
@@ -130,6 +139,23 @@ html {
     width: 25%;
     height: 75px;
 }
+
+@media screen and (max-width: 650px) {
+    .tablink {
+        padding: 10px 12px;
+        font-size: 12px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .tablink {
+        padding: 12px 14px;
+        font-size: 14px;
+        height: 120px;
+    }
+}
+
 
 .tablink:hover {
     background-color: #777;

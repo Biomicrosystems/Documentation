@@ -94,7 +94,20 @@
 
 @media screen and (min-width: 650px) and (max-width: 850px) {
   .row:after {
-    height: 350px;
+    height: 600px;
+    display: block;
+    padding: 0px;
+  }
+
+  .content {
+    margin-left: 75px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1200px) {
+  .row:after {
+    height: 300px;
     display: block;
     padding: 0px;
   }

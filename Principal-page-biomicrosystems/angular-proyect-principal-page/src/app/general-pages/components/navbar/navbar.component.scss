@@ -40,3 +40,33 @@ body {
 .topnav .active {
     background-color: rgb(255, 210, 0);
 }
+
+
+@media screen and (max-width: 1343px) {
+    .container {
+        padding-left: 20%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .container {
+        padding-left: 0%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .topnav {
+        display: grid;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,17 @@
+
+.dashboard {
+  height: 100vh;
+}
+
+.registered-devices {
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__device-logo {
+    width: 30rem;
+  }
+}

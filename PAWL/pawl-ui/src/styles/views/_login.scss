@@ -1,0 +1,29 @@
+@use '../base/variables' as *;
+
+.login {
+  margin: 0 auto;
+  width: 50rem;
+
+  &__signup {
+    text-align: center;
+
+    span {
+      a {
+        color: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__header {
+    padding-bottom: 4rem;
+  }
+
+  &__validation-error {
+    color: $color-danger;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+}

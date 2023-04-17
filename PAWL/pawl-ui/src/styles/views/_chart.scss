@@ -1,0 +1,44 @@
+@use '../base/variables' as *;
+
+.chart-header {
+  margin-bottom: $size-2;
+}
+
+.active-device {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: left;
+
+  &--image {
+    max-width: 300px;
+    bottom: 0;
+    right: 0;
+    margin-top: 5rem;
+  }
+}
+
+.button-graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  margin-top: 2.1875rem;
+  
+
+  &--button {
+    border-color: #e49e00;
+    background-color: #e49e00;
+    color: white;
+    width: 180px;
+    box-shadow: none;
+  }
+}
+
+.button-graph :hover {
+  background-color:#deb350;
+}

@@ -1,0 +1,32 @@
+@use '../base/variables' as *;
+@use '../base/bulma' as *;
+
+.header {
+  text-align: center;
+
+  @include from($desktop) {
+
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  &__title {
+
+    span {
+      color: $color-primary;
+    }
+  }
+}
+
+.input_{
+  width: 160px;
+  height: 30px;
+  border: none;
+  margin-left: 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.125;
+  color:$color-black;
+  background-color: white;
+}

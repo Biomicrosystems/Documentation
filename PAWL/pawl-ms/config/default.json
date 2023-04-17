@@ -1,0 +1,11 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "mongoose": {
+    "port": 27017,
+    "host": "localhost",
+    "database": "pawl"
+  }
+}

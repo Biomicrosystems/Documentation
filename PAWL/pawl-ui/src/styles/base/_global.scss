@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: $size-1;
+}
+
+h2 {
+  font-size: $size-2;
+}
+
+h3 {
+  font-size: $size-3;
+}
+
+h4 {
+  font-size: $size-4;
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+// Fonts
+$roboto: 'Roboto', sans-serif;
+$italiana: 'Italiana', serif;
+
+// Colors
+$gamboge: #e49e00;
+$onyx: #32373b;
+$ruber: #cf4d6f;
+$white-light: #fbfffe;
+$lavender: #f7edf0;
+
+$color-primary:$gamboge;
+$color-black:$onyx;
+$color-danger:$ruber;
+$color-white:$white-light;
+$color-lavender:$lavender;
+
+// Sizes
+$size-1: 6rem;
+$size-2: 4rem;
+$size-3: 2.4rem;
+$size-4: 2rem;
+$size-5: 1.8rem;
+$size-6: 1.6rem;
+$size-7: 1rem;

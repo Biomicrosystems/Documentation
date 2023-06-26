@@ -14,7 +14,6 @@ import { MembersComponent } from './pages/members/members.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
-
 @NgModule({
   declarations: [
     NavbarComponent,

@@ -6,7 +6,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PrincipalPageComponent } from './pages/principal-page/principal-page.component';
-import { LoginComponent } from './pages/login/login.component';
 import { SectionProyectComponent } from './components/section-proyect/section-proyect.component';
 import { SectionPublicationsComponent } from './components/section-publications/section-publications.component';
 import { ResearchAndProjectsComponent } from './pages/research-and-projects/research-and-projects.component';
@@ -21,7 +20,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     AboutUsComponent,
     HeaderComponent,
     PrincipalPageComponent,
-    LoginComponent,
     SectionProyectComponent,
     SectionPublicationsComponent,
     ResearchAndProjectsComponent,

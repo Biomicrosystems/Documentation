@@ -20,7 +20,6 @@ export class NavbarComponent implements OnInit {
           (link as HTMLElement).classList.remove('active-link');
         });
 
-        // Agregar la clase "active-link" al enlace activado
         (event.target as HTMLElement).classList.add('active-link');
       });
     });

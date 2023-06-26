@@ -18,7 +18,7 @@
   width: 25%;
   text-align: left;
   font-family: Lato;
-  font-size: 8pt;
+  font-size: 9pt;
   padding: 3%;
   line-height: 1.8;
 }
@@ -32,18 +32,19 @@
 }
 
 h6 {
-  font-size: 8pt;
+  font-size: 9pt;
   font-weight: bold;
 }
 
 p {
-  font-size: 7pt;
+  font-size: 8pt;
   margin: 0px;
 }
 
 a:hover{
   text-decoration: underline;
 }
+
 a{
   text-decoration: none;
 }
@@ -53,7 +54,7 @@ a{
   height: auto;
   text-align: left;
   width: 100%;
-  font-size: 6pt !important;
+  font-size: 7pt !important;
   font-family: Lato;
   color: #767779;
   line-height: 1.2;
@@ -112,5 +113,4 @@ a{
     display: block;
     padding: 0px;
   }
-
 }

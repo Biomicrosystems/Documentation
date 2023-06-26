@@ -5,20 +5,13 @@
   text-align: center;
   background-color: white;
   color: black;
-  padding: 16px 16px;
-  box-sizing: border-box;
-  box-sizing: inherit;
   margin: 10px 0;
-  padding-left: 200px;
-  padding-right: 200px;
-
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 650px) {
   .about-section {
     width: 100%;
-    display: block;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 16px;
   }
 }

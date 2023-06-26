@@ -1,13 +1,10 @@
 .bg-img {
     background-image: url("https://raw.githubusercontent.com/Biomicrosystems/Documentation/main/Principal-page-biomicrosystems/Teams-photos/photo-page-member-teams.jpg");
-
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-
     position: relative;
 }
-
 
 .about-section {
     font-family: Arial, Helvetica, sans-serif;
@@ -16,9 +13,7 @@
     text-align: center;
     background-color: white;
     color: black;
-    padding: 16px 16px;
     box-sizing: border-box;
-    box-sizing: inherit;
     margin: 10px 0;
     padding-left: 200px;
     padding-right: 200px;
@@ -28,8 +23,8 @@
     .about-section {
         width: 100%;
         display: block;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -45,9 +40,7 @@
 
 .information-research {
     display: grid;
-    grid-template-columns: repeat(auto-fit,
-            minMax(250px,
-                1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     padding: 15px;
 }
@@ -100,9 +93,9 @@ span {
 }
 
 .explications {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
 }
 
 .styles-photos {
@@ -110,18 +103,15 @@ span {
     height: 35%;
     margin-top: 10px;
     border-radius: 60px;
-    border-radius: 60px;
 }
 
 .area {
     text-align: left;
     padding: 10px;
     font-size: 0.9rem;
-    text-align: justify;
 }
 
-body,
-html {
+body, html {
     height: 100%;
     margin: 0;
     font-family: Arial;
@@ -156,7 +146,6 @@ html {
     }
 }
 
-
 .tablink:hover {
     background-color: #777;
 }
@@ -170,7 +159,7 @@ html {
 
 .audiovisual {
     background: rgba(162, 162, 160, 0.672);
-    border-radius: 20px 20px;
+    border-radius: 20px;
     font-weight: bold;
     padding: 10px;
 }
@@ -179,21 +168,9 @@ button:hover {
     background: rgb(255, 210, 0);
 }
 
-#IndustrialMarketApplications {
-    background-color: white;
-    color: black;
-}
-
-#StateArtReasearch {
-    background-color: white;
-    color: black;
-}
-
-#DevelopmentEquipmentAndTechnology {
-    background-color: white;
-    color: black;
-}
-
+#IndustrialMarketApplications,
+#StateArtReasearch,
+#DevelopmentEquipmentAndTechnology,
 #Graduates {
     background-color: white;
     color: black;

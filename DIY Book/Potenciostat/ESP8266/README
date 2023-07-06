@@ -1,1 +1,6 @@
-In this file you can find the aplication of Potenciostat library for esp8266 based microcontroller in Arduino IDE. 
+# Code aplication for Potenciostat reading in ESP8266 based microcontroller
+This code is an example of usage for potenciostat in a microcontroller based in ESP8266; it is not a library yet.
+It contains certain functions created to select parameters for reading cycle as setting speed cycle or setting number of cycles per reading. Every function is commented for its correct usage.
+
+## Additional requirements
+This code needs the aplication of EspSoftwareSerial library from https://github.com/plerup/espsoftwareserial/ as potenciostat uses UART serial protocol for its communication.

@@ -1,1 +1,1 @@
-# Guante-haptico-Tesis
+# Haptic-Glove

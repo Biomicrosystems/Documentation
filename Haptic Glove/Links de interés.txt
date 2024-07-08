@@ -1,0 +1,52 @@
+Una buena opción de guante:
+https://www.youtube.com/watch?v=VCYS_gGN1fw&ab_channel=CarolinaPistillo
+
+Quaterniones:
+https://x-io.co.uk/downloads/madgwick_internal_report.pdf
+https://www.youtube.com/watch?v=B58A1qkEkik&ab_channel=huse360
+https://docs.unity3d.com/ScriptReference/Quaternion.html
+
+DMP:
+https://www.luisllamas.es/arduino-orientacion-imu-mpu-6050/#:~:text=El%20MPU-6050%20es%20una,sencillo%20obtener%20los%20datos%20medidos.
+
+Yaw Pitch Roll:
+https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/
+https://naylampmechatronics.com/blog/45_tutorial-mpu6050-acelerometro-y-giroscopio.html
+
+Unity:
+https://www.youtube.com/watch?v=-3tzYu7d2VU&ab_channel=AprendeConAnder
+- https://learn.unity.com/tutorial/get-started-with-the-unity-hub?uv=2021.3#
+- https://learn.unity.com/tutorial/welcome-to-the-pathway
+- https://learn.unity.com/course/create-with-vr
+
+Otra opción de guante:
+https://www.realovirtual.com/foro/topic/40231/te-enseno-como-fabricar-tus-propios-guantes-hapticos-rovian-s-legna
+
+Package de Oculus:
+https://developer.oculus.com/documentation/unity/unity-starter-samples/
+https://www.youtube.com/watch?v=4bQuWsQVgmk&ab_channel=CometTech
+https://www.youtube.com/watch?v=s1meUk_pSKE&ab_channel=AdamCurtis
+
+Conexión entre arduino y Unity:
+https://www.youtube.com/watch?v=5ElKFY3N1zs&ab_channel=CometTech
+
+Conexión entre esp32 con un mpu6050:
+https://www.youtube.com/watch?v=zN89M_MjVKo&ab_channel=ThatProject
+
+Tesis interesante:
+https://repositorio.upct.es/bitstream/handle/10317/7926/tfg-jor-des.pdf?sequence=1
+
+Info sobre los microcontroladores:
+https://www.makerguides.com/es/esp32-vs-arduino-speed-comparison/
+
+TCA9548A:
+https://www.youtube.com/watch?v=6oo5_2NDi-w&ab_channel=TronixLab
+
+Aparte pero de interés:
+https://repositorio.uam.es/bitstream/handle/10486/688922/pérez_dones_julianmiguel_tfg.pdf?sequence=1
+
+ESP32:
+https://www.luisllamas.es/que-pines-puedo-usar-esp32/
+
+Kicad Flex:
+https://learn.bela.io/tutorials/trill-sensors/designing-a-custom-flex-sensor/

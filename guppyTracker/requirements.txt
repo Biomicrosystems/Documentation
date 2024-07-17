@@ -7,3 +7,5 @@ shapely
 ultralytics
 pillow
 openpyxl
+Flask
+Flask-SocketIO

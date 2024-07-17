@@ -1,0 +1,9 @@
+opencv-python
+scikit-image
+numpy
+scipy
+pandas
+shapely
+ultralytics
+pillow
+openpyxl

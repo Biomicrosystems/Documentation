@@ -1,0 +1,2 @@
+Dentro de los archivos encontrados en esta carpeta, se puede visualizar la carpeta (CH34x_Install_Windows_v3_4) la cual contiene el driver del programador (CH34x), se recomienda instalar en el caso de que este generando problemas para la programacion (subir codigo) o detección del puerto al cual esta instalado el IRON PCB. 
+

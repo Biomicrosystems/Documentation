@@ -646,8 +646,9 @@ const unsigned char PROGMEM ALL [] = {
 };
 
 
+
 ///////// INFORMACIÓN WIFI //////////
-const char* ssid = "IRON"; // EDITAR PARA LA RED LOCAL A LA CUAL SE VAYA A CONECTAR EL ESP8266 ///
+const char* ssid = "IRON"; // EDITAR PARA LA RED LOCAL A LA CUAL SE VAYA A CONECTAR EL ESP8266 /// por defecto (ssid: "IRON", password: 12345678j)
 const char* password = "12345678j"; ///****************************************///
 
 
